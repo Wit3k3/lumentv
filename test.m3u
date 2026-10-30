@@ -1,0 +1,24 @@
+#EXTM3U
+# LumenTV: legal test playlist for Google Play review (and anyone testing the app).
+# Every stream is a Blender Foundation open movie under Creative Commons Attribution, served from a public CDN
+# by its publisher (Blender) or as a public test stream (Mux, Unified Streaming, Akamai, Google ExoPlayer test media):
+#   Big Buck Bunny (c) 2008 Blender Foundation, www.bigbuckbunny.org, CC BY 3.0
+#   Sintel (c) 2010 Blender Foundation, durian.blender.org, CC BY 3.0
+#   Tears of Steel (c) 2012 Blender Foundation, mango.blender.org, CC BY 3.0
+# https://creativecommons.org/licenses/by/3.0/
+#EXTINF:-1 tvg-id="open.tos.hls" tvg-chno="1" group-title="Open movies (CC BY)",Tears of Steel (HLS)
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8
+#EXTINF:-1 tvg-id="open.tos.dash" tvg-chno="2" group-title="Open movies (CC BY)",Tears of Steel (DASH)
+https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.mpd
+#EXTINF:-1 tvg-id="open.tos.mux" tvg-chno="3" group-title="Open movies (CC BY)",Tears of Steel (HLS, subtitles)
+https://test-streams.mux.dev/tos_ismc/main.m3u8
+#EXTINF:-1 tvg-id="open.tos.mov" tvg-chno="4" group-title="Open movies (CC BY)",Tears of Steel 720p (Blender)
+https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov
+#EXTINF:-1 tvg-id="open.sintel.trailer" tvg-chno="5" group-title="Open movies (CC BY)",Sintel trailer 720p (Blender)
+https://download.blender.org/durian/trailer/sintel_trailer-720p.mp4
+#EXTINF:-1 tvg-id="open.bbb.hls" tvg-chno="6" group-title="Animation (CC BY)",Big Buck Bunny (HLS)
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+#EXTINF:-1 tvg-id="open.bbb.dash" tvg-chno="7" group-title="Animation (CC BY)",Big Buck Bunny (DASH)
+https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd
+#EXTINF:-1 tvg-id="open.bbb.mp4" tvg-chno="8" group-title="Animation (CC BY)",Big Buck Bunny 320x180 (MP4)
+https://storage.googleapis.com/exoplayer-test-media-0/BigBuckBunny_320x180.mp4

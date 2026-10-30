@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Polityka prywatności LumenTV · LumenTV Privacy Policy</title>
+<style>
+:root { --bg:#ffffff; --fg:#1d2128; --muted:#5f6368; --line:#e3e5e8; --accent:#1769c2; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0b0d10; --fg:#e8eaed; --muted:#9aa0a6; --line:#2a2e37; --accent:#64b5f6; } }
+* { box-sizing:border-box }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Roboto,"Segoe UI",sans-serif; }
+main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
+nav { display:flex; gap:16px; padding:8px 0 16px; border-bottom:1px solid var(--line); }
+a { color:var(--accent); overflow-wrap:anywhere; }
+h1 { font-size:28px; line-height:1.25; margin:32px 0 8px; }
+h2 { font-size:21px; margin:28px 0 6px; }
+h3 { font-size:17px; margin:20px 0 4px; }
+code { font:14px ui-monospace,Menlo,monospace; background:color-mix(in srgb, var(--line) 60%, transparent); padding:1px 4px; border-radius:4px; overflow-wrap:anywhere; }
+hr { border:0; border-top:1px solid var(--line); margin:48px 0 0; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="#pl">Polski</a><a href="#en" lang="en">English</a></nav>
+<h1 id="pl">Polityka prywatności LumenTV</h1>
+<p>Obowiązuje od: 30.10.2026</p>
+<p>Dotyczy aplikacji <strong>LumenTV z Google Play</strong> (identyfikator <code>app.lumentv.play</code>) na telewizory i przystawki z Android TV.</p>
+<h2>1. Kto odpowiada za aplikację</h2>
+<p>Aplikację udostępnia w Google Play: LakiOne (Łukasz Witkowski), Polska. Kontakt w sprawach prywatności: duch_terapia_9u@icloud.com.</p>
+<h2>2. Najważniejsze w skrócie</h2>
+<ul><li>LumenTV jest <strong>tylko odtwarzaczem</strong>. Nie zawiera kanałów ani filmów: odtwarza listy, które dodajesz Ty (albo operator panelu, jeśli go podłączysz).</li><li><strong>Nie ma reklam, analityki, śledzenia, identyfikatora reklamowego ani kont</strong> u dewelopera. Deweloper <strong>nie dostaje z aplikacji żadnych danych</strong> i nie ma serwera, na który aplikacja by je wysyłała.</li><li>Dane opisane niżej trafiają <strong>wprost z telewizora</strong> do usług, z których korzystasz: do serwerów Twoich list i adresów wskazanych w tych listach, do baz z opisami filmów i napisami, do YouTube przy zwiastunach i opcjonalnie do panelu operatora.</li><li>Raporty awarii <strong>nie są wysyłane</strong>. Kopia danych w chmurze jest wyłączona.</li></ul>
+<h2>3. Jakie dane i dokąd trafiają</h2>
+<h3>3.1. Serwery Twoich list (dostawcy IPTV)</h3>
+<p>Adresy list M3U, adresy serwerów, nazwy użytkowników i hasła do kont dostawców oraz adresy programu TV są zapisane tylko na telewizorze. Aplikacja łączy się z serwerami list, które dodasz (albo doda operator panelu), <strong>oraz z adresami wskazanymi w tych listach</strong>, żeby: pobrać listę kanałów, filmów i seriali, program TV, logo i okładki oraz odtwarzać wybrane strumienie i archiwum. Lista sama podaje adresy strumieni, logo i programu TV (np. w polach <code>url-tvg</code>, <code>tvg-logo</code>); mogą one należeć do innych firm niż dostawca listy, np. do serwisów z logo kanałów, serwerów programu TV albo sieci CDN. Aplikacja łączy się z nimi bez osobnego pytania, a każdy z nich widzi adres IP telewizora i nagłówek User-Agent, a serwer strumienia także to, co i kiedy oglądasz.</p>
+<p>Serwer listy otrzymuje: adres IP telewizora, nagłówek User-Agent (ustawiony dla listy albo „LumenTV/1.0 (Android TV)”), Twój login i hasło (konta logowane nazwą użytkownika i hasłem przesyłają je w adresach zapytań i strumieni) oraz informację, który kanał, film lub odcinek i kiedy oglądasz. Odświeżanie list odbywa się także w tle (co kilka godzin; sprawdzanie nowych tytułów najczęściej co 15 minut, zgodnie z ustawieniami). Wielu dostawców używa nieszyfrowanego <code>http://</code>; wtedy dane, także login i hasło, idą przez sieć bez szyfrowania. Tymi danymi administruje dostawca, którego wybrałeś; deweloper LumenTV nie ma do nich dostępu.</p>
+<h3>3.2. Opisy, plakaty i obsada: The Movie Database (TMDB)</h3>
+<p>Żeby pokazać opisy, plakaty, oceny, obsadę i zwiastuny, aplikacja wysyła do TMDB (<code>api.themoviedb.org</code>, <code>image.tmdb.org</code>, połączenie https) tytuły i lata produkcji filmów i seriali z katalogu Twoich list, tytuł programu, na którym zatrzymasz zaznaczenie w przewodniku TV (do jego zdjęcia), numery TMDB otwieranych tytułów, osób i sezonów oraz język aplikacji (polski albo angielski). Robi to w tle, budując bazę tytułów, i przy otwarciu filmu, serialu lub aktora. Używany jest klucz API aplikacji albo klucz, który wpiszesz. TMDB otrzymuje adres IP telewizora. Zasady TMDB: <a href="https://www.themoviedb.org/privacy-policy">https://www.themoviedb.org/privacy-policy</a></p>
+<h3>3.3. Pomijanie czołówek: TheIntroDB</h3>
+<p>Przy odtwarzaniu filmu albo odcinka aplikacja pyta TheIntroDB (<code>api.theintrodb.org</code>, https) o czas czołówki i napisów końcowych, wysyłając numer TMDB tytułu oraz numer sezonu i odcinka. Dzieje się to automatycznie przy każdym odtworzeniu filmu lub odcinka, który ma numer TMDB. TheIntroDB otrzymuje adres IP telewizora.</p>
+<h3>3.4. Napisy: OpenSubtitles.com</h3>
+<p>Tylko gdy szukasz napisów w odtwarzaczu: aplikacja wysyła do OpenSubtitles (<code>api.opensubtitles.com</code>, https) numer TMDB albo tytuł i rok, numer sezonu i odcinka oraz wybrane języki napisów, a do pobrania napisów logujesz się swoim kontem OpenSubtitles. Login i hasło do OpenSubtitles (podane na telewizorze albo telefonem przez sieć lokalną) są zapisane na telewizorze i wysyłane tylko do OpenSubtitles. OpenSubtitles otrzymuje adres IP telewizora. Zasady OpenSubtitles: <a href="https://www.opensubtitles.com/en/privacy">https://www.opensubtitles.com/en/privacy</a></p>
+<h3>3.5. Zwiastuny: YouTube (Google)</h3>
+<p>Tylko po naciśnięciu „Zwiastun”: zwiastun odtwarza aplikacja YouTube na telewizorze albo odtwarzacz YouTube osadzony w aplikacji. YouTube otrzymuje wtedy numer filmu, adres IP oraz dane i pliki cookie przeglądarki systemowej (WebView), zgodnie z zasadami Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<h3>3.6. Panel operatora (opcjonalny)</h3>
+<p>Aplikacja <strong>nie ma wbudowanego panelu</strong>. Tylko jeśli sam wpiszesz adres panelu w Ustawienia → Konto i pomoc (np. panel hotelu albo sieci, która dostarcza Ci listy), telewizor:</p>
+<ul><li>rejestruje się w panelu i przy każdej synchronizacji (przy starcie aplikacji i co 30 minut) wysyła <strong>model telewizora i wersję aplikacji</strong>; panel nadaje mu <strong>losowy token urządzenia</strong> i kod do aktywacji;</li><li>pobiera z panelu listy (z ich loginami i hasłami), powitanie, komunikat, kontakt i kolor przypisane przez operatora;</li><li>po wybraniu „Zgłoś problem” wysyła <strong>treść wiadomości</strong> i, jeśli go podasz, <strong>kontakt</strong> (telefon albo e-mail).</li></ul>
+<p>Serwer panelu może zapisywać w dziennikach adres IP telewizora. Panel w internecie działa tylko przez https; <code>http://</code> jest dozwolone wyłącznie dla adresów w sieci domowej. <strong>Administratorem tych danych jest operator panelu</strong>, nie deweloper aplikacji; w ich sprawie zwracaj się do operatora. Wersja z Google Play nie pobiera z panelu konfiguracji VPN ani plików aktualizacji.</p>
+<h2>4. Dane, które zostają na telewizorze</h2>
+<p>Na telewizorze, w prywatnym katalogu aplikacji, są: listy i ich dane logowania, ustawienia, PIN rodzicielski i PIN danych list (zapisane jako skrót PBKDF2, nie jawnie), ulubione, ostatnio oglądane, postęp oglądania, historia wyszukiwania, pobrane napisy i pamięć plakatów. Nie trafiają one do dewelopera ani nigdzie indziej poza tym, co opisują punkt 3 i akapit o ekranie głównym poniżej.</p>
+<ul><li><strong>Ekran główny Android TV:</strong> rozpoczęte filmy i odcinki oraz ostatnio oglądane kanały aplikacja pokazuje w rzędzie LumenTV i w „Oglądaj dalej” systemu. Te dane zapisuje systemowy dostawca kanałów TV na tym telewizorze. Obrazki do tych kart (plakaty, kadry, logo kanałów) pobiera sam launcher telewizora z adresów, które podaje mu aplikacja: z TMDB (punkt 3.2) albo od dostawcy listy i z adresów wskazanych w liście (punkt 3.1); te serwery widzą wtedy adres IP telewizora. Rząd LumenTV ustawisz w Ustawienia → Wygląd → Ekran główny telewizora.</li><li><strong>Raporty awarii:</strong> po awarii aplikacja zapisuje raport (bez adresów list i haseł) na telewizorze i pokazuje go przy następnym starcie, żebyś mógł go sfotografować. Raport <strong>nie jest wysyłany</strong>.</li><li><strong>Kopia zapasowa:</strong> aplikacja wyłącza kopię danych w chmurze Google i przenoszenie danych na inne urządzenie.</li></ul>
+<h2>5. Dodawanie danych z telefonu</h2>
+<p>Okna „Z telefonu” (dodawanie listy, klucz TMDB, konto OpenSubtitles) uruchamiają na telewizorze małą stronę WWW dostępną <strong>tylko w Twojej sieci lokalnej</strong> (<code>http://&lt;adres telewizora&gt;:8899</code>, bez szyfrowania), wyłącznie dopóki okno jest otwarte, i tylko z kodem z kodu QR. To, co wpiszesz na telefonie, trafia tylko do telewizora; telewizor nie wysyła tej strony ani danych do internetu (poza zwykłymi połączeniami z punktu 3, np. sprawdzeniem klucza w TMDB).</p>
+<h2>6. Przechowywanie i usuwanie danych</h2>
+<p>Dane na telewizorze są przechowywane, dopóki ich nie usuniesz. Możesz:</p>
+<ul><li>usunąć listę (Ustawienia → Listy kanałów), wylogować konto OpenSubtitles (Ustawienia → Napisy), usunąć własny klucz TMDB (puste pole i „Zapisz i sprawdź”) oraz pobrane napisy;</li><li>wyczyścić wszystkie dane aplikacji (Ustawienia Androida → Aplikacje → LumenTV → Pamięć → Wyczyść dane) albo odinstalować aplikację.</li></ul>
+<p>Deweloper nie przechowuje Twoich danych, więc nie ma ich czego usuwać po swojej stronie; możesz jednak napisać na adres z punktu 1. Dane przekazane dostawcom list, TMDB, TheIntroDB, OpenSubtitles i YouTube podlegają ich zasadom. Dane w panelu operatora usuwa operator (np. usuwając urządzenie z panelu).</p>
+<h2>7. Bezpieczeństwo</h2>
+<p>Dane są zapisane w prywatnym katalogu aplikacji, niedostępnym dla innych aplikacji. Dane list można ukryć osobnym PIN-em danych list; gdy lista jest chroniona, aplikacja nie korzysta z systemowego serwera proxy. Połączenia z TMDB, TheIntroDB, OpenSubtitles i panelem w internecie są szyfrowane (https). Połączenia z serwerami list są szyfrowane tylko wtedy, gdy ich adres zaczyna się od <code>https://</code>; jeśli dostawca ma taki adres, używaj go.</p>
+<h2>8. Dzieci</h2>
+<p>Aplikacja nie jest przeznaczona dla dzieci i jest w Google Play skierowana do osób dorosłych. Treści zależą wyłącznie od list dodanych przez użytkownika; do blokowania kanałów i kategorii służy PIN rodzicielski.</p>
+<h2>9. Twoje prawa</h2>
+<p>Masz prawo do informacji o swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i sprzeciwu oraz do skargi do Prezesa Urzędu Ochrony Danych Osobowych (uodo.gov.pl). Ponieważ deweloper nie otrzymuje Twoich danych, w sprawie danych u dostawców list, TMDB, TheIntroDB, OpenSubtitles, YouTube i operatora panelu zwracaj się do nich. W razie pytań napisz na adres z punktu 1.</p>
+<h2>10. Zmiany</h2>
+<p>O zmianach tej polityki informuje data na górze strony. Jeśli nowa wersja aplikacji zacznie przesyłać inne dane, polityka zostanie zmieniona przed jej wydaniem.</p>
+<hr>
+<div lang="en">
+<h1 id="en">LumenTV Privacy Policy</h1>
+<p>Effective from: 30 October 2026</p>
+<p>This policy covers <strong>LumenTV from Google Play</strong> (package <code>app.lumentv.play</code>) for Android TV televisions and set-top boxes.</p>
+<h2>1. Who is responsible</h2>
+<p>The app is offered on Google Play by LakiOne (Łukasz Witkowski), Poland. Privacy contact: duch_terapia_9u@icloud.com.</p>
+<h2>2. In short</h2>
+<ul><li>LumenTV is a <strong>media player only</strong>. It contains no channels or movies: it plays the playlists that you add (or that an operator panel adds, if you connect one).</li><li>There are <strong>no ads, no analytics, no tracking, no advertising ID and no accounts</strong> with the developer. The developer <strong>receives no data from the app</strong> and runs no server the app would send data to.</li><li>The data described below goes <strong>directly from the TV</strong> to the services you use: your playlists' servers and the addresses those playlists point to, the movie information and subtitle databases, YouTube for trailers and, optionally, an operator panel.</li><li>Crash reports are <strong>not sent anywhere</strong>. Cloud backup of the app's data is turned off.</li></ul>
+<h2>3. What data goes where</h2>
+<h3>3.1. Your playlists' servers (IPTV providers)</h3>
+<p>M3U playlist addresses, server addresses, provider usernames and passwords and TV guide addresses are stored only on the TV. The app connects to the playlist servers you add (or an operator panel adds) <strong>and to the addresses given in those playlists</strong> in order to download the list of channels, movies and series, the TV guide, logos and artwork, and to play the streams and catch-up you choose. A playlist itself gives the addresses of its streams, logos and TV guide (for example in its <code>url-tvg</code> and <code>tvg-logo</code> fields); they may belong to companies other than the playlist's provider, such as channel logo sites, TV guide servers or CDNs. The app connects to them without asking separately; each of them sees the TV's IP address and User-Agent header, and a stream's server also what you watch and when.</p>
+<p>The playlist's server receives the TV's IP address, a User-Agent header (the playlist's own or "LumenTV/1.0 (Android TV)"), your username and password (accounts with a username and password send them in request and stream addresses) and which channel, movie or episode you watch and when. Playlists are also refreshed in the background (every few hours; new titles are checked at most every 15 minutes, as set in the settings). Many providers use unencrypted <code>http://</code>; the data, including the username and password, then travels unencrypted. This data is controlled by the provider you chose; the LumenTV developer has no access to it.</p>
+<h3>3.2. Descriptions, posters and cast: The Movie Database (TMDB)</h3>
+<p>To show descriptions, posters, ratings, cast and trailers, the app sends TMDB (<code>api.themoviedb.org</code>, <code>image.tmdb.org</code>, over https) the titles and years of the movies and series in your playlists' catalogue, the title of the TV guide programme you stop on (for its picture), the TMDB numbers of the titles, people and seasons you open, and the language (Polish or English, as the app is set). It does so in the background while building its title database and when you open a movie, series or person. The app's API key or a key you enter is used. TMDB receives the TV's IP address. TMDB's policy: <a href="https://www.themoviedb.org/privacy-policy">https://www.themoviedb.org/privacy-policy</a></p>
+<h3>3.3. Intro skipping: TheIntroDB</h3>
+<p>When a movie or episode plays, the app asks TheIntroDB (<code>api.theintrodb.org</code>, https) for the timing of its intro and credits, sending the title's TMDB number and the season and episode number. This happens automatically every time a movie or episode with a TMDB number is played. TheIntroDB receives the TV's IP address.</p>
+<h3>3.4. Subtitles: OpenSubtitles.com</h3>
+<p>Only when you search for subtitles in the player: the app sends OpenSubtitles (<code>api.opensubtitles.com</code>, https) the TMDB number or the title and year, the season and episode number and the chosen subtitle languages; to download subtitles you sign in with your OpenSubtitles account. Your OpenSubtitles username and password (entered on the TV, or from your phone over the local network) are stored on the TV and sent only to OpenSubtitles. OpenSubtitles receives the TV's IP address. OpenSubtitles' policy: <a href="https://www.opensubtitles.com/en/privacy">https://www.opensubtitles.com/en/privacy</a></p>
+<h3>3.5. Trailers: YouTube (Google)</h3>
+<p>Only when you press "Zwiastun" (Trailer): the trailer is played by the YouTube app on the TV or by a YouTube player embedded in the app. YouTube then receives the video's ID, the IP address and the system browser's (WebView) data and cookies, under Google's policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<h3>3.6. Operator panel (optional)</h3>
+<p>The app has <strong>no built-in panel</strong>. Only if you enter a panel address yourself in Settings → Account &amp; help ("Konto i pomoc" in Polish), for example the panel of a hotel or network that supplies your playlists, the TV:</p>
+<ul><li>registers with the panel and, at every sync (when the app starts and every 30 minutes), sends the <strong>TV model and app version</strong>; the panel gives it a <strong>random device token</strong> and an activation code;</li><li>downloads from the panel the playlists (with their usernames and passwords), welcome text, message, contact and colour set by the operator;</li><li>when you choose "Report a problem", sends the <strong>message</strong> and, if you enter one, your <strong>contact</strong> (phone or e-mail).</li></ul>
+<p>The panel's server may log the TV's IP address. A panel on the internet works only over https; <code>http://</code> is allowed only for addresses on the home network. <strong>The panel's operator, not the app's developer, controls this data</strong>; contact the operator about it. The Google Play version does not download VPN configurations or update files from the panel.</p>
+<h2>4. Data that stays on the TV</h2>
+<p>Kept in the app's private storage on the TV: playlists and their logins, settings, the parental PIN and the playlist-data PIN (stored as a PBKDF2 hash, not in plain text), favourites, recently watched, watch progress, search history, downloaded subtitles and the poster cache. None of it goes to the developer or anywhere else beyond what section 3 and the paragraph on the home screen below describe.</p>
+<ul><li><strong>Android TV home screen:</strong> movies and episodes in progress and recently watched channels are shown in the LumenTV row and in the system's Watch Next. The TV's system channel provider stores this data on the TV. The pictures on these cards (posters, stills, channel logos) are downloaded by the TV's launcher itself from the addresses the app gives it: from TMDB (section 3.2) or from the playlist's provider and the addresses given in the playlist (section 3.1); those servers then see the TV's IP address. The LumenTV row is set in Settings → Appearance → TV home screen.</li><li><strong>Crash reports:</strong> after a crash the app saves a report (without playlist addresses and passwords) on the TV and shows it at the next start so you can photograph it. The report is <strong>not sent</strong>.</li><li><strong>Backup:</strong> the app turns off cloud backup of its data and transfer to another device.</li></ul>
+<h2>5. Adding data from your phone</h2>
+<p>The "From your phone" windows (adding a playlist, the TMDB key, the OpenSubtitles account) start a small web page on the TV that is reachable <strong>only on your local network</strong> (<code>http://&lt;TV address&gt;:8899</code>, unencrypted), only while the window is open and only with the code in the QR code. What you type on the phone goes only to the TV; the TV does not send this page or the data to the internet (apart from the ordinary connections in section 3, such as checking a key with TMDB).</p>
+<h2>6. Retention and deletion</h2>
+<p>Data on the TV is kept until you delete it. You can:</p>
+<ul><li>remove a playlist (Settings → Playlists), sign out of OpenSubtitles (Settings → Subtitles), remove your own TMDB key (empty field and "Save and check") and the downloaded subtitles;</li><li>clear all of the app's data (Android Settings → Apps → LumenTV → Storage → Clear data) or uninstall the app.</li></ul>
+<p>The developer stores none of your data, so there is nothing to delete on its side; you may still write to the address in section 1. Data given to playlist providers, TMDB, TheIntroDB, OpenSubtitles and YouTube is subject to their policies. Data in an operator panel is deleted by its operator (for example by removing the device from the panel).</p>
+<h2>7. Security</h2>
+<p>Data is stored in the app's private storage, which other apps cannot read. Playlist data can be hidden behind a separate playlist-data PIN; while a playlist is protected, the app does not use the system proxy. Connections to TMDB, TheIntroDB, OpenSubtitles and a panel on the internet are encrypted (https). Connections to playlist servers are encrypted only when their address starts with <code>https://</code>; if your provider offers one, use it.</p>
+<h2>8. Children</h2>
+<p>The app is not intended for children and is aimed at adults on Google Play. Content depends only on the playlists the user adds; the parental PIN locks channels and categories.</p>
+<h2>9. Your rights</h2>
+<p>You have the right to information about your data, to rectification, erasure, restriction and objection, and to lodge a complaint with a data protection authority (in Poland: the President of the Personal Data Protection Office, uodo.gov.pl). As the developer does not receive your data, contact the playlist providers, TMDB, TheIntroDB, OpenSubtitles, YouTube and the panel's operator about data held by them. For questions, write to the address in section 1.</p>
+<h2>10. Changes</h2>
+<p>The date at the top shows the latest change. If a new version of the app starts sending other data, this policy will be updated before that version is released.</p>
+</div>
+</main>
+</body>
+</html>
