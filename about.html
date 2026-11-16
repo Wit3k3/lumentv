@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About LumenTV</title>
+<style>
+:root { --bg:#ffffff; --fg:#1d2128; --muted:#5f6368; --line:#e3e5e8; --accent:#1769c2; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0b0d10; --fg:#e8eaed; --muted:#9aa0a6; --line:#2a2e37; --accent:#64b5f6; } }
+* { box-sizing:border-box }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Roboto,"Segoe UI",sans-serif; }
+main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
+a { color:var(--accent); overflow-wrap:anywhere; }
+h1 { font-size:28px; line-height:1.25; margin:32px 0 8px; }
+h2 { font-size:21px; margin:28px 0 6px; }
+.notice { border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin:8px 0; }
+.muted { color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<h1>About LumenTV</h1>
+<p>LumenTV is a media player for Android TV, Google TV, Fire TV, Android phones and tablets. It plays the user's own
+sources: IPTV subscriptions the user already has (M3U and Xtream Codes playlists) and home media servers (Jellyfin,
+Plex, SMB, DLNA). The app provides no content of its own.</p>
+
+<h2>Services LumenTV works with</h2>
+<p>When the user connects an account (Settings → External accounts), LumenTV tells Trakt.tv or Simkl what is watched
+and reads the user's history and watchlist. Titles are matched with The Movie Database (TMDB).</p>
+<p class="notice">LumenTV uses Trakt but is not endorsed or certified by Trakt.</p>
+<p class="notice">LumenTV uses Simkl but is not endorsed or certified by Simkl.</p>
+<p class="notice">This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>
+<p>The same notices are shown in the app, on the Trakt.tv, Simkl and TMDB pages of Settings → External accounts.</p>
+
+<h2>Privacy</h2>
+<p><a href="privacy.html">LumenTV Privacy Policy</a> (Polish and English).</p>
+<p class="muted">O aplikacji po polsku: LumenTV to odtwarzacz własnych źródeł użytkownika (listy IPTV, serwery
+domowe). LumenTV korzysta z Trakt, Simkl i TMDB, ale nie jest przez te serwisy popierany ani certyfikowany.</p>
+</main>
+</body>
+</html>
